@@ -1,4 +1,5 @@
 import Main from "@/components/Main";
+import { CarouselSpacing } from "@/components/carousel";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
@@ -10,6 +11,8 @@ export default function Home() {
     <main className="isolate h-full w-full">
       <Header />
       <Hero />
+
+      <CarouselSpacing />
 
       <Main />
 

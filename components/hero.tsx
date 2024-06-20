@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <div className="isolate z-10 bg-[linear-gradient(89.01deg,#3ab0e4_-10.97%,#1abc9c_99.15%)] pt-[90px] text-center">
+    <div className="isolate z-10 bg-[linear-gradient(89.01deg,#3ab0e4_-10.97%,#1abc9c_99.15%)] pt-[90px] text-center   ">
       <h1 className="text-center font-medium text-white">
         <span className="cursor-pointer underline underline-offset-4 hover:text-[#006b99]">
           30,219
@@ -15,7 +15,7 @@ export default function Hero() {
         جابینجا: کاریابی آنلاین با بیشترین تعداد آگهی استخدام در ایران
       </h2>
       {/* <!-- form --> */}
-      <div className="container mx-auto mt-[20px] flex w-full flex-col px-[10px] lg:flex-row lg:gap-3">
+      <div className=" max-w-[1100px] mx-auto mt-[20px] flex w-full flex-col px-[10px] lg:flex-row lg:gap-3">
         {/* <!-- 1 input --> */}
         <div className="relative mb-[10px] h-full w-full">
           {/* <!-- icone --> */}
