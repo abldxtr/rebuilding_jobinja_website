@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    /* font-family: Vazirmatn, sans-serif; */
+    direction: rtl;
+    background-color: white;
+    margin: 0;
+  }
+}
+
+@layer components {
+  .lia {
+    @apply py-[25px] px-[20px] hover:bg-[#505050] border-r-2  border-r-[#00000033];
+  }
+  .lititr {
+    @apply text-[#555] font-medium text-[14px];
+  }
+  .lilist {
+    @apply text-[#777] cursor-pointer font-normal text-[14px] hover:text-[#555];
+  }
+  .footertitle {
+    @apply text-[#999] border-b border-b-[#666] py-3 text-[14px] cursor-default hover:text-[#999];
+  }
+  .footersub {
+    @apply text-[#f0f0f0] transition-all cursor-pointer first:footertitle font-light hover:text-[#f9a60b] text-[12px];
+  }
+}
