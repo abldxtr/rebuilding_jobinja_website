@@ -12,10 +12,10 @@ export default function Header() {
         <div
           className={classNames(
             "fixed top-[69px] mr-[-10px] flex md:hidden  w-full  bg-[#555] ",
-            open ? " h-0 overflow-hidden " : "h-auto ",
+            open ? " h-auto " : " h-0 overflow-hidden ",
           )}
         >
-          <ul className="flex flex-col items-start divide-y divide-[#666] text-white [&_li]:w-full">
+          <ul className="flex flex-col items-start divide-y divide-[#666] text-white w-full [&_li]:w-full">
             <li className="relative flex cursor-pointer items-center gap-2 px-[20px] py-[25px] hover:bg-[#505050]">
               <a href="/" className="flex items-center gap-[7px]">
                 {" "}
@@ -63,7 +63,7 @@ export default function Header() {
           </ul>
         </div>
 
-        <div className=" max-w-[1100px] mx-auto flex h-[69px] w-full items-center justify-between overflow-hidden px-[10px] ">
+        <div className=" max-w-[1100px] mx-auto h-[69px] hidden lg:flex w-full items-center justify-between overflow-hidden px-[10px] ">
           {/* <!-- right --> */}
           <div className="hidden lg:block">
             <div>
