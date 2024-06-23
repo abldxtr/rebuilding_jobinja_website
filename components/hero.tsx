@@ -1,3 +1,5 @@
+import { Input1, Input2, Input3 } from "./input";
+
 export default function Hero() {
   return (
     <div className="isolate z-10 bg-[linear-gradient(89.01deg,#3ab0e4_-10.97%,#1abc9c_99.15%)] pt-[90px] text-center   ">
@@ -17,92 +19,14 @@ export default function Hero() {
       {/* <!-- form --> */}
       <div className=" max-w-[1100px] mx-auto mt-[20px] flex w-full flex-col px-[10px] lg:flex-row lg:gap-3">
         {/* <!-- 1 input --> */}
-        <div className="relative mb-[10px] h-full w-full">
-          {/* <!-- icone --> */}
+        <Input1 />
 
-          <div className="absolute right-[8px] top-[14px]">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="3"
-              stroke="currentColor"
-              className="size-[18px] cursor-pointer stroke-[#9d9d9d]"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-              ></path>
-            </svg>
-          </div>
-          {/* <!-- input --> */}
-          <input
-            type="text"
-            name="search"
-            id="search-01"
-            className="h-full w-full rounded-[3px] border border-[#e5e5e5] p-[10px] pr-[34px] text-[14px] outline-none focus:[box-shadow:inset_0_-1px_0_1px_#d0d0d0]"
-            placeholder="عنوان شغلی، نام شرکت، مهارت یا..."
-          />
-        </div>
         {/* <!-- 2 --> */}
-        <div className="relative mb-[10px] hidden h-full w-full lg:block">
-          {/* <!-- icone --> */}
+        <Input2 />
 
-          <div className="absolute right-[8px] top-[14px]">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="3"
-              stroke="currentColor"
-              className="size-[18px] cursor-pointer stroke-[#9d9d9d]"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-              ></path>
-            </svg>
-          </div>
-          {/* <!-- input --> */}
-          <input
-            type="text"
-            name="search"
-            id="search-01"
-            className="h-full w-full rounded-[3px] border border-[#e5e5e5] p-[10px] pr-[34px] text-[14px] outline-none focus:[box-shadow:inset_0_-1px_0_1px_#d0d0d0]"
-            placeholder="عنوان شغلی، نام شرکت، مهارت یا..."
-          />
-        </div>
         {/* <!-- 3 --> */}
-        <div className="relative mb-[10px] hidden h-full w-full lg:block">
-          {/* <!-- icone --> */}
+        <Input3 />
 
-          <div className="absolute right-[8px] top-[14px]">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="3"
-              stroke="currentColor"
-              className="size-[18px] cursor-pointer stroke-[#9d9d9d]"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-              ></path>
-            </svg>
-          </div>
-          {/* <!-- input --> */}
-          <input
-            type="text"
-            name="search"
-            id="search-01"
-            className="h-full w-full rounded-[3px] border border-[#e5e5e5] p-[10px] pr-[34px] text-[14px] outline-none focus:[box-shadow:inset_0_-1px_0_1px_#d0d0d0]"
-            placeholder="عنوان شغلی، نام شرکت، مهارت یا..."
-          />
-        </div>
         {/* <!-- 4 input : button --> */}
         <div className="shrink-0 lg:w-max lg:flex-nowrap">
           <button className="w-full bg-[#ffcd70] text-[14px] font-medium leading-[44px] text-[#222] [box-shadow:inset_0_-3px_0_0_#ffb833] hover:bg-[#ffd68a] lg:px-[18px]">
