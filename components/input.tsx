@@ -2,15 +2,7 @@
 
 import classNames from "classnames";
 import { MouseEventHandler, useRef, useState } from "react";
-import { useOnClickOutside } from "usehooks-ts";
 
-import {
-  Combobox,
-  ComboboxButton,
-  ComboboxInput,
-  ComboboxOption,
-  ComboboxOptions,
-} from "@headlessui/react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import {
@@ -27,21 +19,18 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import ProvinceComboBox from "./input.select";
-// import { CheckIcon, ChevronDownIcon } from '@heroicons/react/20/solid'
-
-// import { MdLocationPin } from "react-icons/md";
 
 export function Input1() {
   const [open, setOpen] = useState(false);
   const ref = useRef(null);
   const Inputref = useRef(null);
 
-  const handleClickOutside = () => {
-    setOpen(false);
-  };
+  // const handleClickOutside = () => {
+  //   setOpen(false);
+  // };
 
-  useOnClickOutside(ref, handleClickOutside);
-  useOnClickOutside(Inputref, handleClickOutside);
+  // useOnClickOutside(ref, handleClickOutside);
+  // useOnClickOutside(Inputref, handleClickOutside);
 
   return (
     <div
@@ -206,7 +195,7 @@ export function Input3() {
 
             <div className=" text-[14px] flex  text-[#aaa] ">
               {value ? (
-                provinceOptions.find((item) => item.value === value)?.label
+                categories.find((item) => item.value === value)?.label
               ) : (
                 <span className=" text-[14px] flex  text-[#aaa] ">
                   همه دسته بندی ها
@@ -239,9 +228,9 @@ export function Input3() {
             className="border border-[#3ab1e4] !rounded-[0px] !focus:outline-0 !p-[4px] !text-[12px] !px-[15px] !my-[10px] !h-[31px]   "
           />
           <CommandList>
-            <CommandEmpty>No framework found.</CommandEmpty>
+            <CommandEmpty>No category found.</CommandEmpty>
             <CommandGroup className="!max-h-[212px] !overflow-y-auto ">
-              {provinceOptions.map((framework) => (
+              {categories.map((framework) => (
                 <CommandItem
                   key={framework.value}
                   value={framework.value}
@@ -307,3 +296,70 @@ export const provinceOptions = provinces.map((province) => ({
   value: province,
   label: province,
 }));
+
+export const categories = [
+  { value: "all", label: "همه‌ی دسته‌بندی‌ها" },
+  { value: "sales_marketing", label: "فروش و بازاریابی" },
+  { value: "web_programming_software", label: "وب،‌ برنامه‌نویسی و نرم‌افزار" },
+  { value: "finance_accounting", label: "مالی و حسابداری" },
+  { value: "office_admin", label: "مسئول دفتر، اجرائی و اداری" },
+  { value: "digital_marketing", label: "دیجیتال مارکتینگ" },
+  { value: "content_production_management", label: "تولید و مدیریت محتوا" },
+  { value: "design", label: "طراحی" },
+  { value: "customer_support", label: "پشتیبانی و امور مشتریان" },
+  { value: "it_devops_server", label: "IT / DevOps / Server" },
+  {
+    value: "industrial_engineering_management",
+    label: "مهندسی صنایع و مدیریت صنعتی",
+  },
+  { value: "education", label: "آموزش" },
+  { value: "general_worker", label: "کارگر ساده، نیروی خدماتی" },
+  { value: "electrical_engineering", label: "مهندسی برق و الکترونیک" },
+  { value: "hr_personnel", label: "منابع انسانی و کارگزینی" },
+  { value: "procurement_commerce", label: "خرید و بازرگانی" },
+  { value: "civil_engineering_architecture", label: "مهندسی عمران و معماری" },
+  { value: "cinema_video", label: "حوزه‌ سینما و تصویر" },
+  { value: "technical_technician", label: "تکنسین فنی، تعمیرکار" },
+  { value: "warehouse_management", label: "انبارداری" },
+  {
+    value: "mechanical_aerospace_engineering",
+    label: "مهندسی مکانیک و هوافضا",
+  },
+  { value: "tourism", label: "گردشگری" },
+  { value: "product_manager", label: "مدیر محصول" },
+  {
+    value: "market_research_economic_analysis",
+    label: "تحقیق بازار و تحلیل اقتصادی",
+  },
+  { value: "medical_nursing_pharmacy", label: "پزشکی،‌ پرستاری و دارویی" },
+  {
+    value: "skilled_worker_industrial_worker",
+    label: "کارگر ماهر، کارگر صنعتی",
+  },
+  { value: "research_development", label: "تحقیق و توسعه" },
+  { value: "transportation", label: "حمل و نقل" },
+  { value: "food_industry", label: "صنایع غذایی" },
+  { value: "driver_delivery", label: "راننده، پیک موتوری" },
+  { value: "hospitality", label: "هتلداری" },
+  { value: "legal_expert_lawyer", label: "کارشناس حقوقی،‌ وکالت" },
+  { value: "public_relations", label: "روابط عمومی" },
+  { value: "insurance_management", label: "مدیریت بیمه" },
+  { value: "chemical_petroleum_engineering", label: "مهندسی شیمی و نفت" },
+  { value: "translation", label: "ترجمه" },
+  { value: "hse", label: "HSE" },
+  { value: "chemistry_pharmacy", label: "شیمی، داروسازی" },
+  { value: "guard", label: "نگهبان" },
+  { value: "mining_metallurgy_engineering", label: "مهندسی معدن و متالورژی" },
+  { value: "life_sciences_lab", label: "علوم زیستی و آزمایشگاهی" },
+  { value: "biomedical_engineering", label: "مهندسی پزشکی" },
+  {
+    value: "textile_fashion_design",
+    label: "مهندسی نساجی، طراحی پارچه و لباس",
+  },
+  { value: "agricultural_engineering", label: "مهندسی کشاورزی" },
+  { value: "journalism", label: "خبر‌نگاری" },
+  { value: "polymer_engineering", label: "مهندسی پلیمر" },
+  { value: "music_sound", label: "حوزه‌ موسیقی و صدا" },
+  { value: "ceo", label: "CEO" },
+  { value: "physical_education", label: "تربیت بدنی" },
+];
