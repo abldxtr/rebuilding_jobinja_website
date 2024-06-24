@@ -125,7 +125,7 @@ export function Input2() {
             />
             <CommandList>
               <CommandEmpty>No framework found.</CommandEmpty>
-              <CommandGroup className="!max-h-[212px] !overflow-y-auto scrollbar-thumb-rounded-[5px] scrolll  scrollbar-thin	 scrollbar-track-rounded-[35px] scrollbar scrollbar-thumb-slate-500 scrollbar-track-slate-300  ">
+              <CommandGroup className="!max-h-[212px] !overflow-y-auto custom-scroll  scrollbar-thin scrollbar scrollbar-thumb-[#00000080] scrollbar-track-[#00000040]   ">
                 {provinceOptions.map((framework) => (
                   <CommandItem
                     key={framework.value}
@@ -223,7 +223,7 @@ export function Input3() {
             />
             <CommandList>
               <CommandEmpty>No category found.</CommandEmpty>
-              <CommandGroup className="!max-h-[212px] !overflow-y-auto scrollbar-thumb-rounded-[5px] scrolll  scrollbar-thin	 scrollbar-track-rounded-[35px] scrollbar scrollbar-thumb-slate-500 scrollbar-track-slate-300 ">
+              <CommandGroup className="!max-h-[212px] !overflow-y-auto  custom-scroll  scrollbar-thin scrollbar scrollbar-thumb-[#00000080] scrollbar-track-[#00000040] ">
                 {categories.map((framework) => (
                   <CommandItem
                     key={framework.value}

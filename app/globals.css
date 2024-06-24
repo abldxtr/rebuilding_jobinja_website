@@ -91,7 +91,12 @@
   .footersub {
     @apply text-[#f0f0f0] transition-all cursor-pointer first:footertitle font-light hover:text-[#f9a60b] text-[12px];
   }
-  scrolll::-webkit-scrollbar-thumb {
-    @apply rounded-full;
-  }
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  border-radius: 5px;
 }
