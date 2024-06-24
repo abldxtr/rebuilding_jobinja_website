@@ -5,36 +5,20 @@ import { companies_data } from "./data";
 import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
 
-// import { Card, CardContent } from "@/components/ui/card";
-// import {
-//   Carousel,
-//   CarouselApi,
-//   CarouselContent,
-//   CarouselItem,
-//   CarouselNext,
-//   CarouselPrevious,
-// } from "@/components/ui/carousel";
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselApi,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 export function CarouselSpacing() {
-  // const [api, setApi] = React.useState<CarouselApi>();
-  // const [emblaRef] = useEmblaCarousel();
-  // const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()]);
-
-  // React.useEffect(() => {
-  //   if (!api) {
-  //     return;
-  //   }
-
-  //   // setCount(api.scrollSnapList().length)
-  //   // setCurrent(api.selectedScrollSnap() + 1)
-
-  //   api.on("select", () => {
-  //     //   setCurrent(api.selectedScrollSnap() + 1)
-  //   });
-  // }, [api]);
   return (
     <>
-      <div className=" th-[36px] my-[20px]  ">
+      <div className=" h-[36px] my-[20px]  ">
         <div className=" flex w-full  items-center justify-center   ">
           <p className="bg-[#f9f9f9] py-[6px] px-[10px] cursor-normal rounded-[40px] text-[12px] text-[#555]   ">
             یک رزومه در جابینجا به شرکت{" "}
@@ -46,15 +30,23 @@ export function CarouselSpacing() {
         </div>
       </div>
 
-      <div
-        className="max-w-[1100px] mx-auto    overflow-hidden "
-        // ref={emblaRef}
+      <Carousel
+        className="w-full max-w-[1100px] mx-auto overflow-hidden group "
+        opts={{
+          align: "start",
+          loop: true,
+        }}
+        plugins={[
+          Autoplay({
+            delay: 2000,
+          }),
+        ]}
       >
-        <div className="-ml-1 flex overflow-hidden ">
+        <CarouselContent className=" mx-10  ">
           {companies_data.companies.map((item, index) => (
-            <div
+            <CarouselItem
               key={index}
-              className="pl-1 basis-1/2 md:basis-1/3 lg:basis-1/6 shrink-0 "
+              className="pl-1 sm:basis-1/3 lg:basis-1/6"
             >
               <div className=" flex flex-col justify-center items-center cursor-pointer group  ">
                 {/* img */}
@@ -71,12 +63,14 @@ export function CarouselSpacing() {
                   </div>
                 </div>
               </div>
-            </div>
+            </CarouselItem>
           ))}
-        </div>
-        {/* <CarouselPrevious />
-        <CarouselNext /> */}
-      </div>
+        </CarouselContent>
+        <CarouselPrevious className="lg:flex items-center justify-center hidden !-left-0 opacity-0 group-hover:opacity-100 " />
+        <CarouselNext className="lg:flex items-center justify-center hidden !-right-0 opacity-0 group-hover:opacity-100  " />
+      </Carousel>
+
+      {/*  */}
     </>
   );
 }

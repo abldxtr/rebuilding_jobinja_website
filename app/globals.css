@@ -69,7 +69,7 @@
 @layer base {
   body {
     /* font-family: Vazirmatn, sans-serif; */
-    direction: rtl;
+    /* direction: rtl; */
     background-color: white;
     margin: 0;
   }
@@ -90,5 +90,8 @@
   }
   .footersub {
     @apply text-[#f0f0f0] transition-all cursor-pointer first:footertitle font-light hover:text-[#f9a60b] text-[12px];
+  }
+  scrolll::-webkit-scrollbar-thumb {
+    @apply rounded-full;
   }
 }
