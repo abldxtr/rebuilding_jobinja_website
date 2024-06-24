@@ -69,7 +69,7 @@
 @layer base {
   body {
     /* font-family: Vazirmatn, sans-serif; */
-    /* direction: rtl; */
+    direction: rtl;
     background-color: white;
     margin: 0;
   }

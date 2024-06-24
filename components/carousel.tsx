@@ -35,6 +35,7 @@ export function CarouselSpacing() {
         opts={{
           align: "start",
           loop: true,
+          direction: "rtl",
         }}
         plugins={[
           Autoplay({
