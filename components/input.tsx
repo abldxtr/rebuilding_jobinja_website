@@ -117,7 +117,7 @@ export function Input2() {
             {/* <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" /> */}
           </Button>
         </PopoverTrigger>
-        <PopoverContent className="!w-[313px] p-0 !rounded-[0px]   ">
+        <PopoverContent className="!w-[300px] p-0 !rounded-[0px]   ">
           <Command>
             <CommandInput
               placeholder="جستجو..."
@@ -215,7 +215,7 @@ export function Input3() {
             {/* <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" /> */}
           </Button>
         </PopoverTrigger>
-        <PopoverContent className="!w-[313px] p-0 !rounded-[0px]   ">
+        <PopoverContent className="!w-[300px] p-0 !rounded-[0px]   ">
           <Command>
             <CommandInput
               placeholder="جستجو..."

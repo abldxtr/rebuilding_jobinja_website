@@ -40,6 +40,7 @@ export function CarouselSpacing() {
         plugins={[
           Autoplay({
             delay: 2000,
+            stopOnInteraction: false,
           }),
         ]}
       >
@@ -47,7 +48,7 @@ export function CarouselSpacing() {
           {companies_data.companies.map((item, index) => (
             <CarouselItem
               key={index}
-              className="pl-1 sm:basis-1/3 lg:basis-1/6"
+              className="pl-1 sm:basis-1/3 lg:basis-1/6 group/item "
             >
               <div className=" flex flex-col justify-center items-center cursor-pointer group  ">
                 {/* img */}
@@ -59,7 +60,7 @@ export function CarouselSpacing() {
                   <div className=" text-[#a5a5a5] font-normal text-[11px] ">
                     {item.job_count}
                   </div>
-                  <div className="  font-semibold text-[#3ab1e4] group-hover:text-[#1988b8] text-[11px] ">
+                  <div className="  font-semibold text-[#3ab1e4] group-hover/item:text-[#1988b8] text-[11px] ">
                     {item.name}
                   </div>
                 </div>
